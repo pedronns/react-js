@@ -1,0 +1,100 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+  {
+      "name": "Decoração",
+      "description": "Escolha a decoração para sua festa, e nós a montamos.",
+      "price": 1400,
+      "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+    }
+###
+###
+
+GET http://localhost:3000/api/services
+
+###
+
+GET http://localhost:3000/api/services/66d0a1203db0d4ddbb553f09
+
+###
+
+DELETE http://localhost:3000/api/services/66d213f2c87095727e62f6d9
+
+###
+
+PUT http://localhost:3000/api/services/66d0ae8dbc4aea0944fc0fff
+Content-Type: application/json
+
+{
+    "name": "TESTE ATUALIZAÇÃO",
+    "description": "Alguma descrição",
+    "price": 9999,
+    "image": "https://placehold.co/600x400"
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Evento 1",
+    "author": "Pessoa 1",
+    "description": "Festa nova",
+    "budget": 9000,
+    "image": "https://placehold.co/600x400",
+    "services": [
+        {
+            "name": "Algum serviço 1",
+            "description": "Alguma descrição",
+            "price": 1600,
+            "image": "https://placehold.co/600x400"
+        },
+        {
+             "name": "Algum serviço 2",
+            "description": "OUTRA descrição",
+            "price": 3000,
+            "image": "https://placehold.co/600x400"
+        }
+
+    ]
+}
+
+###
+
+GET http://localhost:3000/api/parties
+
+###
+
+GET http://localhost:3000/api/parties/66d0b3532412d383a1f23d19
+
+###
+
+DELETE http://localhost:3000/api/parties/66d0b4212412d383a1f23d1b
+
+###
+
+PUT http://localhost:3000/api/parties/66d1eb1f4e6cf08ce071086d
+Content-Type: application/json
+
+{
+    "title": "Evento NOVO",
+    "author": "Pessoa NOVA",
+    "description": "Festa NOVA",
+    "budget": 9999,
+    "image": "https://placehold.co/600x400",
+    "services": [
+        {
+            "name": "Algum serviço NOVO",
+            "description": "Alguma descrição NOVA",
+            "price": 1600,
+            "image": "https://placehold.co/600x400"
+        },
+        {
+             "name": "Algum serviço 2",
+            "description": "MAIS UMA descrição",
+            "price": 3000,
+            "image": "https://placehold.co/600x400"
+        }
+
+    ]
+}
